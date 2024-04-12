@@ -1,0 +1,297 @@
+/* Estilos para pantallas grandes */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f0f5ff; /* Un tono azul pastel */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.logo img {
+    max-width: 300px; /* Ajusta el tamaño del logo según tus necesidades */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333; /* Color de texto */
+    font-family: 'Arial', sans-serif; /* Una fuente moderna */
+    font-size: 16px; /* Tamaño de fuente */
+    transition: color 0.3s ease; /* Transición suave para el color */
+}
+
+nav ul li a:hover {
+    color: #007bff; /* Color azul más intenso al pasar el ratón */
+}
+
+/* Estilos para pantallas pequeñas (Responsive) */
+@media only screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        text-align: center; /* Centra el texto */
+    }
+
+    .logo img {
+        margin-bottom: 100px;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+}
+
+/* Estilos para el carrusel */
+.obras {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.carrusel {
+    display: flex;
+    justify-content: center;
+    overflow-x: auto; /* Permitir desplazamiento horizontal en pantallas pequeñas */
+    flex-wrap: nowrap; /* Evitar que las imágenes se envuelvan en pantallas pequeñas */
+}
+
+
+.imagen {
+    position: relative;
+    overflow: hidden;
+    width: 600px; /* Ancho de cada imagen */
+    height: 400px; /* Altura de cada imagen */
+    margin-right: 10px; /* Espacio entre las imágenes */
+}
+
+.imagen img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    transition: transform 0.5s ease; /* Transición suave */
+
+}
+
+.imagen:hover img {
+    transform: translate(0, 0);
+}
+
+.nombre {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 16px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* Estilos para pantallas pequeñas (Responsive) */
+@media only screen and (max-width: 768px) {
+    .carrusel {
+        flex-wrap: nowrap; /* Evitar que las imágenes se envuelvan en pantallas pequeñas */
+        overflow-x: auto; /* Permitir desplazamiento horizontal en pantallas pequeñas */
+        scroll-snap-type: x mandatory; /* Desplazamiento por imagen */
+        -webkit-overflow-scrolling: touch; /* Desplazamiento suave en dispositivos móviles */
+        -ms-overflow-style: none; /* Ocultar barra de desplazamiento en Internet Explorer y Edge */
+        scrollbar-width: none; /* Ocultar barra de desplazamiento en Firefox */
+    }
+    
+    .imagen {
+        width: 50%; /* Mostrar solo dos imágenes en pantallas pequeñas */
+        max-width: none; /* Eliminar el ancho máximo en pantallas pequeñas */
+        flex-shrink: 0; /* Evitar que las imágenes se ajusten en tamaño */
+        scroll-snap-align: start; /* Alinear las imágenes al principio del contenedor */
+        margin-right: 0; /* Eliminar el espacio entre las imágenes */
+    }
+    
+    .imagen img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* Estilos para la sección de descarga de PDF */
+.descarga {
+    padding: 20px;
+    background-color: #0f98d8; /* Color de fondo azul a la moda */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    text-align: center;
+}
+
+.descarga h2,
+.descarga p {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Sombra de texto para resaltar */
+    color: #fff; /* Color de texto blanco */
+}
+
+.descarga a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #fff; /* Color de fondo blanco para el botón */
+    color: #007bff; /* Color de texto azul */
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transición suave para el color de fondo y texto */
+}
+
+.descarga a:hover {
+    background-color: #e8eaec; /* Color de fondo azul más oscuro al pasar el ratón */
+    color: #fff; /* Color de texto blanco */
+}
+
+/* Estilos para la sección de logos de empresas */
+.logos {
+    margin-top: 20px;
+    overflow: hidden; /* Oculta los logos que se desborden del contenedor */
+}
+
+.carrusel-logos {
+    display: flex;
+    animation: desplazar 20s linear infinite; /* 20s de duración, linear para movimiento uniforme, infinite para repetición continua */
+}
+
+.carrusel-logos img {
+    margin-right: 20px; /* Espacio entre los logos */
+    max-width: 150px; /* Tamaño máximo de los logos */
+}
+
+/* Animación de desplazamiento */
+@keyframes desplazar {
+    from {
+        transform: translateX(100%); /* Empieza fuera del contenedor a la derecha */
+    }
+    to {
+        transform: translateX(-100%); /* Termina fuera del contenedor a la izquierda */
+    }
+}
+
+/* Estilos para pantallas pequeñas */
+@media only screen and (max-width: 768px) {
+    .carrusel-logos img {
+        max-width: 80px; /* Reduce el tamaño de los logos en pantallas pequeñas */
+    }
+    
+    .carrusel-logos {
+        animation-duration: 5s; /* Reduce la duración de la animación en pantallas pequeñas */
+    }
+}
+
+/* Estilos para la sección de contacto */
+.contacto {
+    padding: 20px;
+    background-color: #f0f5ff; /* Color de fondo azul pastel */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    border-radius: 10px; /* Bordes redondeados */
+    text-align: center;
+}
+
+.contacto h2 {
+    margin-bottom: 20px;
+}
+
+.info-contacto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.info-contacto .icono {
+    margin-right: 10px;
+}
+
+.info-contacto p {
+    margin: 0;
+}
+
+/* Estilos para pantallas pequeñas */
+@media only screen and (max-width: 768px) {
+    .info-contacto {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .info-contacto .icono {
+        margin-right: 0;
+        margin-bottom: 5px;
+    }
+}
+
+/* Estilos específicos para los iconos de contacto */
+.telefono {
+    margin-left: 10px; /* Espacio entre el icono y el número de teléfono */
+    order: 1;
+}
+
+.correo {
+    margin-right: 10px; /* Espacio entre el correo y el icono de ubicación */
+    margin-left: 10px; /* Espacio entre el icono de teléfono y el correo */
+    order: 2;
+}
+
+.ubicacion {
+    margin-right: 10px; /* Espacio entre la ubicación y el icono */
+    order: 3;
+}
+
+/* Estilos mejorados para el footer */
+footer {
+    background-color: #000305; /* Color azul brillante */
+    color: #fff; /* Texto blanco */
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.1); /* Sombra en la parte superior */
+}
+
+.derechos {
+    flex-grow: 1;
+    text-align: left; /* Alinea el texto en el centro */
+}
+
+.derechos p {
+    margin: 0; /* Elimina el margen predeterminado del párrafo */
+    font-size: 14px; /* Tamaño de fuente más pequeño */
+}
+
+.redes-sociales {
+
+    display: flex;
+    align-items: center; /* Centra verticalmente los iconos */
+}
+
+.redes-sociales a {
+    margin-left: 10px;
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    color: #fff; /* Color de los iconos */
+}
+
+
+.redes-sociales a img {
+    width: 24px; /* Tamaño más pequeño para los iconos */
+    height: 24px;
+}
+
+.redes-sociales a:hover {
+    transform: scale(1.1); /* Efecto de escala al pasar el ratón */
+}
+

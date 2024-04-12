@@ -1,0 +1,77 @@
+/* Estilos para pantallas grandes */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f0f5ff; /* Un tono azul pastel */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.logo img {
+    max-width: 300px; /* Ajusta el tamaño del logo según tus necesidades */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333; /* Color de texto */
+    font-family: 'Arial', sans-serif; /* Una fuente moderna */
+    font-size: 16px; /* Tamaño de fuente */
+    transition: color 0.3s ease; /* Transición suave para el color */
+}
+
+nav ul li a:hover {
+    color: #007bff; /* Color azul más intenso al pasar el ratón */
+}
+
+/* Estilos para pantallas pequeñas (Responsive) */
+@media only screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        text-align: center; /* Centra el texto */
+    }
+
+    .logo img {
+        margin-bottom: 100px;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+}
+
+.historia {
+    background-image: url('fotobuena.jpg');
+    background-size: cover; /* Para cubrir todo el área */
+    background-position: center; /* Para centrar la imagen */
+    color: #493333ea; /* Color de texto blanco */
+    padding: 50px 0; /* Ajusta el espacio alrededor del contenido */
+    text-align: center; /* Centra el contenido */
+}
+
+.container {
+    width: 500px; /* Ancho máximo del contenido */
+   height: 300px;
+    margin: 0 auto; /* Centra el contenido horizontalmente */
+}
+
+/* Estilos para pantallas pequeñas */
+@media only screen and (max-width: 768px) {
+    .historia {
+        padding: 30px 0; /* Ajusta el espacio alrededor del contenido en pantallas pequeñas */
+    }
+}
