@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styleNuestraEmpresa.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
     <title>Document</title>
 </head>
 <body>
@@ -25,13 +27,81 @@
         </nav>
     </header>
 
-    <section class="historia">
+    <section class="contenido">
         <div class="container">
-            <h2>Nuestra Historia</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam aliquam, arcu a scelerisque vulputate, nisl mi vestibulum ipsum, non aliquet justo diam a libero.</p>
-            <!-- Agrega más contenido según sea necesario -->
+            <div class="columna historia">
+                <h2>Nuestra Historia</h2>
+                <p>
+                    Estructuras y Pilotajes S.A.S., es una empresa con sede en la ciudad de Cartagena de Indias, se especializa en la implementación de cimentaciones tanto superficiales como profundas, donde la técnica del pilotaje es fundamental. Nuestro enfoque se centra en garantizar la solidez y estabilidad de las estructuras desde sus cimientos. También nos dedicamos a la construcción de una amplia gama de estructuras, abarcando desde edificaciones comerciales y residenciales hasta proyectos de infraestructuras de gran envergadura. Con un compromiso inquebrantable con la ciudad y la excelencia técnica, estamos preparados para afrontar los desafíos más exigentes y ofrecer soluciones innovadoras que superen las expectativas de nuestros clientes.
+                    Sus orígenes se dan desde el año 2010, año en que nace la empresa aún no establecida. Especializándose en pilotajes manuales. En el año 2012 se constituye jurídicamente bajo la razón social Estructuras y pilotajes S.A.S., ofreciendo servicios de pilotaje manual y con equipos especializados.</p>
+                <!-- Agrega más contenido según sea necesario -->
+            </div>
+            <div class="columna carrusel">
+                <!-- Carrusel de imágenes -->
+                <div id="carousel">
+                    <div><img src="img/azul3.jpg" alt="Imagen 1"></div>
+                    <div><img src="img/manual1.png" alt="Imagen 1"></div>
+                    <div><img src="img/foto buena4.jpg" alt="Imagen 2"></div>
+                    <div><img src="img/tornillo10.jpg" alt="Imagen 3"></div>
+                    <!-- Agrega más imágenes según sea necesario -->
+                </div>
+            </div>
         </div>
     </section>
-    
+
+    <footer>
+        <!-- Contenido del footer -->
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#carousel').slick({
+                autoplay: true,
+                autoplaySpeed: 2000, // Cambia la velocidad de transición de las imágenes
+                arrows: false, // Oculta las flechas de navegación
+                dots: true, // Muestra los puntos de navegación
+                infinite: true,
+                speed: 500,
+                slidesToShow: 1,
+                slidesToScroll: 1
+            });
+        });
+    </script>
+
+<section class="nosotros">
+    <div class="container">
+        <div class="columna">
+            <h2>Quiénes Somos</h2>
+            <hr class="linea">
+            <p> Nuestra empresa piensa en su bienestar.
+                Se caracteriza por la introducción de nuevas tecnologías, que no has permitido participar en nuevos mercados.
+                Está enfocado en cimentaciones, pilotajes y servicios de obras civiles en general, como construcción de puentes y estructuras.
+                Contamos con una experiencia de 10 años en los procesos de pilotajes, cimentaciones y construcciones.</p>
+        </div>
+        <div class="columna">
+            <h2>Misión</h2>
+            <hr class="linea">
+            <p>ESTRUCTURAS Y PILOTAJES S.A.S. es una empresa dedicada a servicios de ingeniería especializados en proyectos de pilotajes y obras civiles la cual busca atender satisfactoriamente las necesidades y expectativas de sus clientes, A través del cumplimiento en los servicios con altos estándares de calidad que garantizan solidez y reconocimiento a nivel local, regional y nacional.</p>
+        </div>
+        <div class="columna">
+            <h2>Visión</h2>
+            <hr class="linea">
+            <p>Para el año 2025 ESTRUCTURAS Y PILOTAJES S.A.S. será una empresa comprometida con la excelencia, Que se consolidara como líder en el sector de la construcción altamente capacitada, capaz de establecer alianzas estratégicas que conlleven un servicio eficaz e integral</p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="derechos">
+        <p>&copy; 2024 Todos los derechos reservados</p>
+    </div>
+    <div class="redes-sociales">
+        <a href="#"><img src="img/Instagram.ico" alt="Instagram"></a>
+        <a href="#"><img src="img/linkedin.ico" alt="LinkedIn"></a>
+        <a href="#"><img src="img/YouTube.ico" alt="YouTube"></a>
+    </div>
+</footer>
 </body>
 </html>
